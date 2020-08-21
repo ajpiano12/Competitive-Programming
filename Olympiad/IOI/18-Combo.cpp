@@ -60,17 +60,17 @@ string guess_sequence(int n){
         else return "Y";
     }
     string ans = "";
-    int cnt1 = press("BABXAXAY");
-    if(cnt1 == 1){
-        int cnt2 = press("BY");
+    int cnt1 = press("ABAX");
+    if(cnt1 == 0) ans += 'Y';
+    else if(cnt1 == 1){
+        int cnt2 = press("AYB");
         if(cnt2 == 0) ans += 'X';
-        else if(cnt2 == 1) ans += 'Y';
-        else ans += 'B';
+        else if(cnt2 == 1) ans += 'B';
+        else ans += 'A';
     }else{
-        int cnt2 = press("XA");
+        int cnt2 = press("A");
         if(cnt2 == 0) ans += 'B';
-        else if(cnt2 == 1) ans += 'A';
-        else ans += 'X';
+        else ans += 'A';
     }
     char car[4] = {'A','B','X','Y'};
     char acar[3];
